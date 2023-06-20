@@ -1,0 +1,41 @@
+.container {
+    background-color: black;
+}
+
+.navbarcontainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.navbarul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.navbaritem {
+    color: white;
+    font-weight: bold;
+}
+
+.navbaractions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbaractions button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    padding: 6px 15px;
+    cursor: pointer;
+}
+
+.navbaractions button:hover {
+    background-color: white;
+    color: black;
+}
