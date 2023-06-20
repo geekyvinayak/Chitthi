@@ -21,7 +21,7 @@ function Addpost() {
         const user = "abcd"
         const bag = {message : ciphertext,user:user,time:date,roomid:id}
         await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co/setdata",bag);
-        nav("/home");
+        nav(`/getrooms/${id}`);
       };
 
 
@@ -45,7 +45,7 @@ function Addpost() {
                 <button>Submit</button>
             </div>
             <div class="form-btn">
-               <Link to="/home">Go back</Link>
+               <Link to={`/getrooms/${id}`}>Go back</Link>
             </div>
         </form>
     </div>

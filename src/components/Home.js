@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import Decoder from './Decoder';
 import "../assets/home.css"
+import { ToastContainer, toast } from 'react-toastify';
 import { MyContext } from './context/Context';
 
 function Home() {
@@ -31,6 +32,7 @@ function Home() {
       </div>
     )}
     </div>
+    <ToastContainer></ToastContainer>
     </>
   )
 }

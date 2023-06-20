@@ -11,6 +11,8 @@ import { MyContext } from "./components/context/Context";
 import Contextprovider from "./components/context/Contextprovider";
 import Roomsadd from "./components/Roomsadd";
 import Roomchats from "./components/Roomchats";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
           </Routes>
         </Contextprovider>
       </Router>
+      <ToastContainer></ToastContainer>
     </>
   );
 }

@@ -13,7 +13,7 @@ function Roomsadd() {
   const onSubmit = async (data) =>{
     const result = await getdata(data.roomid,getemail);
     if(result==="done"){
-      toast.success('Room Created', {
+      await toast.success('Room Created', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -41,8 +41,9 @@ function Roomsadd() {
 
   const onJoin = async (data) =>{
     const result = await setdata(data.roomid1,getemail);
+    console.log(result)
     if(result==="joined"){
-      toast.success('Room Joined', {
+     await toast.success('Room Created', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
