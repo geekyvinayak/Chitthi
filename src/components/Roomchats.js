@@ -8,7 +8,7 @@ function Roomchats() {
 
     const getdata = async()=>{
         console.log("yufsvbc",id)
-          const {data} = await axios.post("http://localhost:5000/getsingledata",{id})
+          const {data} = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co//getsingledata",{id})
           setdata(data)
           console.log("ssss",data)
       }

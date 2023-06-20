@@ -20,7 +20,7 @@ function Addpost() {
         const date = new Date();
         const user = "abcd"
         const bag = {message : ciphertext,user:user,time:date,roomid:id}
-        await axios.post("http://localhost:5000/setdata",bag);
+        await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co//setdata",bag);
         nav("/home");
       };
 

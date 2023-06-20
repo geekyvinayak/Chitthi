@@ -19,14 +19,14 @@ function Roomsadd() {
   };
 
   const setdata = async (roomid,email) => {
-    let { data } = await axios.post("http://localhost:5000/joinroom", {
+    let { data } = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co//joinroom", {
      roomid:roomid , email:email
     });
     console.log(data)
   };
 
   const getdata = async (roomid,email) => {
-    let { data } = await axios.post("http://localhost:5000/createroom", {
+    let { data } = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co//createroom", {
      roomid:roomid , email:email
     });
     console.log(data)
