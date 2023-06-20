@@ -9,12 +9,12 @@ function Roomsadd() {
   const {  getemail } = useContext(MyContext)
   const nav = useNavigate();
   const onSubmit = async (data) =>{
-    getdata(data.roomid,getemail);
+    await getdata(data.roomid,getemail);
     nav("/home")
   };
 
   const onJoin = async (data) =>{
-    setdata(data.roomid1,getemail);
+    await setdata(data.roomid1,getemail);
     nav("/home")
   };
 
@@ -30,7 +30,6 @@ function Roomsadd() {
      roomid:roomid , email:email
     });
     console.log(data)
-    
   };
 
   return (
