@@ -9,6 +9,7 @@ function Roomsadd() {
   const { register, handleSubmit } = useForm();
   const {  getemail } = useContext(MyContext)
   const nav = useNavigate();
+
   const onSubmit = async (data) =>{
     const result = await getdata(data.roomid,getemail);
     if(result==="done"){
@@ -39,15 +40,41 @@ function Roomsadd() {
   };
 
   const onJoin = async (data) =>{
-    await setdata(data.roomid1,getemail);
-    nav("/home")
+    const result = await setdata(data.roomid1,getemail);
+    if(result==="joined"){
+      toast.success('Room Joined', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+      nav("/home")
+    }
+    else{
+      toast.warning("Room doesn't Exists!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
+
+   
   };
 
   const setdata = async (roomid,email) => {
     let { data } = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co/joinroom", {
      roomid:roomid , email:email
     });
-    console.log(data)
+    return data;
   };
 
   const getdata = async (roomid,email) => {
