@@ -18,7 +18,7 @@ function Read() {
   };
 
   const getdata = async () => {
-    let { data } = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co//getmessage", {
+    let { data } = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co/getmessage", {
       index:index,id:id
     });
     setele(data);

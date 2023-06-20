@@ -19,7 +19,7 @@ function Login() {
     const bag = {email:email,password:password}
 
     if(signup){
-        let {data} = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co//signup",bag);
+        let {data} = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co/signup",bag);
         if(data=='already exist'){
             toast.error('User already Exists!', {
                 position: "top-right",
@@ -48,7 +48,7 @@ function Login() {
         console.log(data)
     }
     else{
-        let {data} = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co//login",bag);
+        let {data} = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co/login",bag);
         if(data === 'notfound'){
             toast.error('User not Exists! Please signupp', {
                 position: "top-right",

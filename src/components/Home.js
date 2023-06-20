@@ -12,7 +12,7 @@ function Home() {
 
     const getdata = async()=>{
       const email = getemail;
-        const {data} = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co//getroom",{email:email})
+        const {data} = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co/getroom",{email:email})
         setdata(data)
         console.log(data)
     }
