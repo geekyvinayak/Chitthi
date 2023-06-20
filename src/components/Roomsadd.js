@@ -3,14 +3,39 @@ import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { MyContext } from './context/Context';
+import { ToastContainer, toast } from 'react-toastify';
 
 function Roomsadd() {
   const { register, handleSubmit } = useForm();
   const {  getemail } = useContext(MyContext)
   const nav = useNavigate();
   const onSubmit = async (data) =>{
-    await getdata(data.roomid,getemail);
-    nav("/home")
+    const result = await getdata(data.roomid,getemail);
+    if(result==="done"){
+      toast.success('Room Created', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+      nav("/home")
+    }
+    else{
+      toast.warning('Room already Exists!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
   };
 
   const onJoin = async (data) =>{
@@ -29,7 +54,7 @@ function Roomsadd() {
     let { data } = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co/createroom", {
      roomid:roomid , email:email
     });
-    console.log(data)
+    return data;
   };
 
   return (
@@ -60,6 +85,8 @@ function Roomsadd() {
       <Link to="/home">Go Back</Link>
     </form>
   </div>
+  <ToastContainer></ToastContainer>
+
   </>
   )
 }
