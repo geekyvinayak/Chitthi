@@ -4,9 +4,10 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { MyContext } from './context/Context';
 import { ToastContainer, toast } from 'react-toastify';
+import { ErrorMessage } from "@hookform/error-message";
 
 function Roomsadd() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit} = useForm();
   const {  getemail } = useContext(MyContext)
   const nav = useNavigate();
 
@@ -96,6 +97,7 @@ function Roomsadd() {
           {...register("roomid")}
           className="inputFeild"
         ></input>
+       
         <input type="submit" />
         <Link to="/home">Go Back</Link>
       </form>

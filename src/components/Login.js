@@ -8,8 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const {  setlogedin,setemail } = useContext(MyContext);
-  const [signup,setsignup] = useState(false);
+  const {  setlogedin,setemail,signup,setsignup } = useContext(MyContext);
+//   const [signup,setsignup] = useState(false);
 
   const nav = useNavigate();
   const {register, handleSubmit } = useForm();

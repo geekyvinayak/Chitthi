@@ -4,8 +4,7 @@ import '../assets/navbar.css'
 import { MyContext } from './context/Context';
 
 const Navbar = () => {
-  const { logedin } = useContext(MyContext);
-  
+  const { logedin,signup,setsignup } = useContext(MyContext);
 
   return (
 
@@ -22,7 +21,7 @@ const Navbar = () => {
                     </div>
                     :
                     <div className='navbaractions'>
-                       <Link to="/"><button>Signup</button></Link>
+                       <button onClick={()=>{setsignup(!signup)}}>{signup?"Login":"Sign Up"}</button>
                       
                     </div>}
                 </li>
