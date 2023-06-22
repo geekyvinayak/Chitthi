@@ -41,7 +41,11 @@
 }
 
 #addpost{
+    scale: 1.2;
     position: fixed;
     bottom: 30px;
     right: 30px;
+    background-color: rgb(177, 193, 197);
+    border-radius: 8px;
+    backdrop-filter: contrast(0.2) blur(5px) ;
 }

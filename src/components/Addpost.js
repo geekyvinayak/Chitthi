@@ -35,7 +35,7 @@ function Addpost() {
         <form onSubmit={handleSubmit(onSubmit)}>
             <div class="form">
                 <label for="date">Enter Message</label>
-                <textarea name="email" id="password" placeholder="Enter Email" {...register("message")} rows="10" cols="20" ></textarea>
+                <textarea name="email" id="password" placeholder="Enter Email" {...register("message")} rows="5" cols="20" ></textarea>
             </div>
             <div class="form">
                 <label for="date">Key</label>

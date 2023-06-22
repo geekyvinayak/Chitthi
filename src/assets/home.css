@@ -18,6 +18,9 @@
     padding: 0 21px;
     max-width: 80vh;
 }
+.card-container:last-child{
+    margin-bottom: 25px;
+}
 .card-container button {
     background-color: black;
     color: white;

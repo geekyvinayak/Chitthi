@@ -7,16 +7,17 @@ li{
     list-style: none;
 }
 
-/* .container{
-    max-width: 900px;
+.login-container{
+    max-width: 1320px;
+    width: 100%;
     margin: 0 auto;
-    width: 100%;
-    padding: 15px;
-} */
-
+}
+.login-container li{
+    text-decoration: underline;
+    font-size: 26px;
+}
 .form-container{
-    max-width: 500px;
-    width: 100%;
+    width: 40%;
     margin: 100px auto;
     padding: 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -34,30 +35,52 @@ li{
 }
 
 .form{
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
-    gap: 20px;
+    gap: 14px;
     /* align-items: center; */
     justify-content: center;
     flex-direction: column;
 }
 
 .form input{
-    padding: 10px 10px;
+    padding: 14px 10px;
     outline: none;
+    border: 1px solid black;
+    border-radius: 6px;
 }
 
 .form-btn{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .form-btn button{
     padding: 10px 25px;
-    border: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
     background-color: black;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    opacity: 0.9;
 }
+.form-btn button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.2s ease-in;
+}
+.form-btn div{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container{
+        width: 70%;
+    }
+  }
