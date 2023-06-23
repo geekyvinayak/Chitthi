@@ -131,7 +131,7 @@ function Login() {
               name="email"
               id="password"
               placeholder="Enter Email"
-              {...register("email")}
+              {...register("email",required)}
             />
           </div>
           <div class="form">
@@ -141,7 +141,7 @@ function Login() {
               name="password"
               id="password"
               placeholder="Enter Password"
-              {...register("password")}
+              {...register("password",required)}
             />
           </div>
           <div class="form-btn">
