@@ -55,7 +55,7 @@ function Login() {
         "https://insubstantialfilthyhashmaps.vinayak04.repl.co/login",
         bag
       );
-      if (data.stat === "notfound") {
+      if (data === "notfound") {
         toast.error("User not Exists! Please signupp", {
           position: "top-right",
           autoClose: 5000,
