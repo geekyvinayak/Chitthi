@@ -11,8 +11,8 @@ import { MyContext } from "./components/context/Context";
 import Contextprovider from "./components/context/Contextprovider";
 import Roomsadd from "./components/Roomsadd";
 import Roomchats from "./components/Roomchats";
-import { ToastContainer, toast } from 'react-toastify';
-
+import { ToastContainer, toast } from "react-toastify";
+import NotFoound from "./components/NotFoound";
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
             <Route path="/read/:id/:index" element={<Read />} />
             <Route path="/getrooms/:id" element={<Roomchats />} />
             <Route path="/roomsadd" element={<Roomsadd />} />
+            <Route path="/*" element={<NotFoound />} />
           </Routes>
         </Contextprovider>
       </Router>

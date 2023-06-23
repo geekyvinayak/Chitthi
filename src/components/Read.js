@@ -7,9 +7,10 @@ import "../assets/read.css";
 import { MyContext } from "./context/Context";
 function Read() {
   const { register, handleSubmit } = useForm();
-  const { index , id } = useParams();
+  const { index, id } = useParams();
   const [ele, setele] = useState([]);
   const [key, setkey] = useState();
+  const { logedin, setlogedin } = useContext(MyContext);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -18,13 +19,20 @@ function Read() {
   };
 
   const getdata = async () => {
-    let { data } = await axios.post("https://insubstantialfilthyhashmaps.vinayak04.repl.co/getmessage", {
-      index:index,id:id
-    });
+    let { data } = await axios.post(
+      "https://insubstantialfilthyhashmaps.vinayak04.repl.co/getmessage",
+      {
+        index: index,
+        id: id,
+      }
+    );
     setele(data);
   };
 
   useEffect(() => {
+    if (!logedin) {
+      navigator("/");
+    }
     getdata();
   }, []);
 
@@ -43,10 +51,11 @@ function Read() {
           <Link to={`/getrooms/${id}`}>Go Back</Link>
         </form>
       )}
-        {key && ele.message && <Decoder message={ele.message} keys={key} id={id} />}
-     
-      </div>
-);
+      {key && ele.message && (
+        <Decoder message={ele.message} keys={key} id={id} />
+      )}
+    </div>
+  );
 }
 
 export default Read;
