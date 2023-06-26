@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, Routes } from "react-router-dom";
 import { useNavigate } from "react-router-dom/dist";
 import "../assets/navbar.css";
@@ -46,6 +46,40 @@ const Navbar = () => {
                 </div>
               )}
             </li>
+            {logedin ? 
+            <li className="responsive-menu">
+              <div class="hamburger-menu">
+                <div className="appname">Chitthi</div>
+                <input id="menu__toggle" type="checkbox"  />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+                <ul class="menu__box">
+                      <li>
+                        <Link to="/home">
+                          <button className="menu__item" onClick={()=>{(document.getElementById("menu__toggle").checked = false)}}>Home</button>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/roomsadd">
+                          <button className="menu__item" onClick={()=>{(document.getElementById("menu__toggle").checked = false)}}>Create/Join Room </button>
+                        </Link>
+                      </li>
+                      <li>
+                        <button className="menu__item"
+                          onClick={() => {
+                            console.log("ha hua click");
+                            localStorage.removeItem("token");
+                            nav("/");
+                          }}
+                        >
+                          Logout
+                        </button>
+                      </li>
+                </ul>
+              </div>
+            </li>
+            : <div className="appname">Chitthi</div>}
           </ul>
         </div>
       </nav>
