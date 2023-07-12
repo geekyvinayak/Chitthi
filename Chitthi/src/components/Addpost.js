@@ -23,7 +23,7 @@ function Addpost() {
     const user = "abcd";
     const bag = { message: ciphertext, user: user, time: date, roomid: id };
     await axios.post(
-      "https://insubstantialfilthyhashmaps.vinayak04.repl.co/setdata",
+      "https://chitthi-backend.vercel.app/setdata",
       bag
     );
     nav(`/getrooms/${id}`);

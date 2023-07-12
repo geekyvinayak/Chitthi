@@ -21,7 +21,7 @@ function Login() {
 
     if (signup) {
       let { data } = await axios.post(
-        "https://insubstantialfilthyhashmaps.vinayak04.repl.co/signup",
+        "https://chitthi-backend.vercel.app/signup",
         bag
       );
       if (data == "already exist") {
@@ -52,7 +52,7 @@ function Login() {
       console.log(data);
     } else {
       let { data } = await axios.post(
-        "https://insubstantialfilthyhashmaps.vinayak04.repl.co/login",
+        "https://chitthi-backend.vercel.app/login",
         bag
       );
       if (data === "notfound") {
@@ -91,7 +91,7 @@ function Login() {
   
   const verify  = async(token) =>{
 
-    let {data} = await axios.get("https://insubstantialfilthyhashmaps.vinayak04.repl.co/verify",{headers:{"token":token}})
+    let {data} = await axios.get("https://chitthi-backend.vercel.app/verify",{headers:{"token":token}})
     console.log('da',data.decode);
     if(data.stat){
         setemail(data.decode.data);

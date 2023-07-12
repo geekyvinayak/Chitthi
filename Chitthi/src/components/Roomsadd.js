@@ -75,7 +75,7 @@ function Roomsadd() {
   }, []);
   const setdata = async (roomid, email) => {
     let { data } = await axios.post(
-      "https://insubstantialfilthyhashmaps.vinayak04.repl.co/joinroom",
+      "https://chitthi-backend.vercel.app/joinroom",
       {
         roomid: roomid,
         email: email,
@@ -86,7 +86,7 @@ function Roomsadd() {
 
   const getdata = async (roomid, email) => {
     let { data } = await axios.post(
-      "https://insubstantialfilthyhashmaps.vinayak04.repl.co/createroom",
+      "https://chitthi-backend.vercel.app/createroom",
       {
         roomid: roomid,
         email: email,

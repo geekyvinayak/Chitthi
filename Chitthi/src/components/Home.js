@@ -16,7 +16,7 @@ function Home() {
   const getdata = async () => {
     const email = getemail;
     const { data } = await axios.post(
-      "https://insubstantialfilthyhashmaps.vinayak04.repl.co/getroom",
+      "https://chitthi-backend.vercel.app/getroom",
       { email: email }
     );
     setdata(data);

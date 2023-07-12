@@ -13,7 +13,7 @@ function Roomchats() {
   const getdata = async () => {
     console.log("yufsvbc", id);
     const { data } = await axios.post(
-      "https://insubstantialfilthyhashmaps.vinayak04.repl.co/getsingledata",
+      "https://chitthi-backend.vercel.app/getsingledata",
       { id }
     );
     setdata(data);

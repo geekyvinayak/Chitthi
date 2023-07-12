@@ -20,7 +20,7 @@ function Read() {
 
   const getdata = async () => {
     let { data } = await axios.post(
-      "https://insubstantialfilthyhashmaps.vinayak04.repl.co/getmessage",
+      "https://chitthi-backend.vercel.app/getmessage",
       {
         index: index,
         id: id,
