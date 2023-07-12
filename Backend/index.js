@@ -6,13 +6,13 @@ const routes = require("./routes/RoomRoute")
 const app = express()
 
 const PORT =  5000
-// var corsOptions = {
-//     origin: 'https://chitthi.vercel.app',
-//     optionsSuccessStatus: 200 // For legacy browser support
-// }
+var corsOptions = {
+    origin: 'https://chitthi.vercel.app',
+    optionsSuccessStatus: 200 // For legacy browser support
+}
 
 app.use(express.json())
-app.use(cors());
+app.use(cors(corsOptions));
 
 
 mongoose.connect("mongodb+srv://geekyvinayak:u8z5cLQNJI324Txf@cluster0.cukrkqp.mongodb.net/Cluster0?retryWrites=true&w=majority").then(()=>console.log("connected")).catch((err)=>console.log(err))
