@@ -4,6 +4,7 @@ const {getRoom, setRoom,getSingleRoom, login, signup, users, getroom , createroo
 const router = express.Router();
 
 // router.get("/getdata",getRoom);
+router.get("/",(req,res)=>{res.send("Welcome To Chitthi")});
 router.get("/user",users);
 router.post("/getsingledata",getSingleRoom);
 router.get("/verify",verify);
