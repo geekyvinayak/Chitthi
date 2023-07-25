@@ -4,6 +4,9 @@ const mongoose = require('mongoose')
 const cors = require("cors")
 const routes = require("./routes/RoomRoute")
 const app = express()
+const dotenv = require("dotenv")
+
+dotenv.config();
 
 const PORT =  5000
 var corsOptions = {
@@ -15,7 +18,7 @@ app.use(express.json())
 app.use(cors(corsOptions));
 
 
-mongoose.connect("mongodb+srv://geekyvinayak:u8z5cLQNJI324Txf@cluster0.cukrkqp.mongodb.net/Cluster0?retryWrites=true&w=majority").then(()=>console.log("connected")).catch((err)=>console.log(err))
+mongoose.connect(process.env.URI).then(()=>console.log("connected")).catch((err)=>console.log(err))
 
 app.use("/",routes);
 
