@@ -46,7 +46,7 @@ function Roomchats() {
       {data.length===0?<div className="card-container"><h3>No Chats Found</h3></div>:
       data?.map((ele, index) => (
           <div className="card-container">
-          <div>{data.length - 1 - index}</div>
+          <div>{data.length - 1 - index} - </div>
             <div>{ele.time}</div>
             <div>
               <Link to={`/read/${id}/${index}`}>
