@@ -9,13 +9,13 @@ const dotenv = require("dotenv")
 dotenv.config();
 
 const PORT =  5000
-// var corsOptions = {
-//     origin: 'https://chitthi.vercel.app',
-//     optionsSuccessStatus: 200 // For legacy browser support
-// }
+var corsOptions = {
+    origin: 'https://chitthi.vercel.app',
+    optionsSuccessStatus: 200 // For legacy browser support
+}
 
 app.use(express.json())
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 
 mongoose.connect(process.env.URI).then(()=>console.log("connected")).catch((err)=>console.log(err))
