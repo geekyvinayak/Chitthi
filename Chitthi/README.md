@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# 📜 Chitthi: Secure Messaging Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Chitthi** is a secure messaging platform where users can send **end-to-end encrypted messages**. Its unique feature allows users to set their own encryption keys, ensuring that only they can decrypt their messages—providing absolute privacy, even from site administrators.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- **🔐 User-Defined Encryption:** Users set and control their encryption keys for messages.  
+- **💬 Secure Messaging:** Messages are encrypted and can only be decrypted with the correct key.  
+- **🛠️ Room-Based Communication:** Create or join rooms for secure individual or group chats.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📖 User Flow  
 
-### `npm test`
+### 1️⃣ **Login/Signup**  
+![Screenshot 2024-11-20 at 10 43 39 AM 10 50 57 AM](https://github.com/user-attachments/assets/53fed155-740e-439d-9bee-7b6516b7a80e)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Login:** Use your email and password to access your account.  
+- **Signup:** Create a new account by providing your email and password.  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2️⃣ **Home Page**  
+![Screenshot 2024-11-20 at 10 49 22 AM](https://github.com/user-attachments/assets/98e76f92-9f5a-4f2e-aba0-b18b7923cafb)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- View all the rooms you’ve joined.  
+- Use the navigation bar to **create new rooms** or **join existing ones**.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### 3️⃣ **Create/Join Room**  
+![Screenshot 2024-11-20 at 10 49 45 AM](https://github.com/user-attachments/assets/96723f5f-8f11-4ad8-ba38-e82956c64c48)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Create Room:** Enter a unique Room ID to create a new room.  
+- **Join Room:** Enter an existing Room ID to join that room.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 4️⃣ **Room Interface** 
+![Screenshot 2024-11-20 at 10 50 12 AM](https://github.com/user-attachments/assets/a7a4a7fb-9e58-4d21-b0e2-723573e60d25)
 
-## Learn More
+- **Send Messages:**  
+  - Enter an encryption key and your message.  
+  - The message is encrypted and sent securely.  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Read Messages:**  
+  - Use the correct encryption key to decrypt and read messages.  
+![Screenshot 2024-11-20 at 10 50 23 AM](https://github.com/user-attachments/assets/b06d353a-4d43-42ad-accb-ee0c527763f1)
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛡️ Security  
 
-### Code Splitting
+Chitthi prioritizes **privacy and security** with these safeguards:  
+- **Key Ownership:** Encryption keys are managed by users—only you can decrypt your messages.  
+- **Administrator Privacy:** Even site admins cannot access your encrypted content.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🚀 How to Use  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 1. Login or Signup  
+- **Existing Users:** Log in with your email and password.  
+- **New Users:** Sign up to create an account.  
 
-### Making a Progressive Web App
+### 2. Navigate to the Home Page  
+- View your joined rooms or create/join rooms using the top navigation bar.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3. Create/Join Rooms  
+- **Create:** Enter a unique Room ID to create a room.  
+- **Join:** Use an existing Room ID to access a room.  
 
-### Advanced Configuration
+### 4. Securely Chat in Rooms  
+- **Send:** Use an encryption key to secure your messages.  
+- **Read:** Enter the same key to decrypt and read received messages.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🤝 Contributing  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Want to contribute to Chitthi? Follow these steps:  
+1. Fork the repository.  
+2. Submit a pull request.  
+3. For major changes, open an issue to discuss your idea.  
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🖥️ Live Demo  
+[Click here to explore Chitthi](https://chitthi.vercel.app/)  
+
+---
+
+### 💡 *Chitthi ensures your privacy, one message at a time!*
